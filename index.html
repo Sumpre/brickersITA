@@ -19,27 +19,34 @@
         .hotbar {
             width: 100%;
             max-width: 800px;
-            height: 80px;
+            height: 100px; /* Altezza aumentata leggermente per ospitare i link in più righe */
             background-color: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(5px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             margin: 20px auto;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
+            flex-direction: column; /* Cambiato a colonna per il layout verticale */
+            align-items: flex-start; /* Allineamento a sinistra */
+            justify-content: center;
+            padding: 10px 20px;
             box-sizing: border-box;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
+        .title-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Spazio tra la barra del titolo e il link YouTube */
+        }
+
         .title {
             font-size: 24px;
             font-weight: bold;
             color: #333;
-            margin-right: auto;
+            margin-right: 20px; /* Spazio tra il titolo e i link */
         }
 
         .hotbar-icons {
@@ -48,7 +55,7 @@
         }
 
         .hotbar-icons a {
-            margin-left: 20px;
+            margin: 0 10px;
             text-decoration: none;
             color: #333;
             display: flex;
@@ -111,13 +118,23 @@
 </head>
 <body>
     <div class="hotbar">
-        <div class="title">brickers</div>
+        <div class="title-bar">
+            <div class="title">brickers</div>
+            <div class="hotbar-icons">
+                <a href="#home" class="home-link">Home</a>
+                <a href="https://whatsapp.com/channel/0029Vabjtii4yltMQCO1g433" target="_blank">
+                    WhatsApp
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.771.463 3.503 1.338 5.031l-1.464 5.307 5.444-1.428c1.5.822 3.196 1.231 4.883 1.231 5.523 0 10-4.477 10-10s-4.477-10-10-10zm5.837 14.284c-.243.679-1.232 1.244-2.017 1.406-.535.111-1.206.2-3.508-.75-2.947-1.186-4.81-4.101-4.958-4.294-.147-.194-1.179-1.567-1.179-2.987s.747-2.116 1.012-2.405c.263-.29.579-.362.772-.362.192 0 .384.002.553.01.179.008.417-.067.652.504.243.593.826 2.057.898 2.208.071.151.116.323.023.518-.093.195-.139.316-.278.485-.139.169-.293.375-.421.504s-.276.265-.119.524c.157.259.698 1.147 1.497 1.859 1.03.925 1.894 1.216 2.153 1.346.259.13.41.112.553-.065.143-.176.637-.743.807-1.001.17-.259.339-.216.58-.13.241.086 1.531.722 1.796.854.266.132.444.195.51.308.066.113.066.656-.177 1.335z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
         <div class="hotbar-icons">
-            <a href="#home" class="home-link">Home</a>
-            <a href="https://whatsapp.com/channel/0029Vabjtii4yltMQCO1g433" target="_blank">
-                WhatsApp
+            <a href="https://youtube.com/@brickers6458" target="_blank">
+                YouTube
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.771.463 3.503 1.338 5.031l-1.464 5.307 5.444-1.428c1.5.822 3.196 1.231 4.883 1.231 5.523 0 10-4.477 10-10s-4.477-10-10-10zm5.837 14.284c-.243.679-1.232 1.244-2.017 1.406-.535.111-1.206.2-3.508-.75-2.947-1.186-4.81-4.101-4.958-4.294-.147-.194-1.179-1.567-1.179-2.987s.747-2.116 1.012-2.405c.263-.29.579-.362.772-.362.192 0 .384.002.553.01.179.008.417-.067.652.504.243.593.826 2.057.898 2.208.071.151.116.323.023.518-.093.195-.139.316-.278.485-.139.169-.293.375-.421.504s-.276.265-.119.524c.157.259.698 1.147 1.497 1.859 1.03.925 1.894 1.216 2.153 1.346.259.13.41.112.553-.065.143-.176.637-.743.807-1.001.17-.259.339-.216.58-.13.241.086 1.531.722 1.796.854.266.132.444.195.51.308.066.113.066.656-.177 1.335z"/>
+                    <path d="M19.615 3.184c.927.23 1.659.96 1.888 1.888.447 1.727.497 5.328.497 5.328s0 3.601-.497 5.328c-.23.927-.961 1.658-1.888 1.888-1.727.447-7.615.447-7.615.447s-5.888 0-7.615-.447c-.927-.23-1.658-.961-1.888-1.888-.497-1.727-.497-5.328-.497-5.328s0-3.601.497-5.328c.23-.927.961-1.658 1.888-1.888 1.727-.447 7.615-.447 7.615-.447s5.888 0 7.615.447zm-10.615 4.816v6l5.5-3-5.5-3z"/>
                 </svg>
             </a>
         </div>
