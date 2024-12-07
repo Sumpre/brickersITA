@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotbar con Neve</title>
+    <title>Hotbar</title>
     <style>
         body {
             margin: 0;
@@ -13,11 +13,11 @@
             flex-direction: column;
             align-items: center;
             background-color: #f3f4f6;
-            overflow: hidden; /* Nasconde le palline fuori dallo schermo */
+            overflow: hidden;
         }
 
         .hotbar {
-            max-width: 100%; /* Adatta la hotbar alla larghezza del dispositivo */
+            max-width: 100%;
             height: 80px;
             backdrop-filter: blur(5px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,26 +25,26 @@
             margin: 20px auto;
             display: flex;
             align-items: center;
-            justify-content: center; /* Centra il contenuto della hotbar */
+            justify-content: center;
             padding: 0 10px;
             box-sizing: border-box;
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-image: url('1000317435.jpg'); /* Inserisci il percorso della tua immagine qui */
-            background-size: cover; /* Adatta l'immagine all'area */
-            background-position: center; /* Centra l'immagine */
+            background-image: url('1000317435.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         .title, .hotbar-icons a {
             font-size: 16px;
             font-weight: bold;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente per leggibilità */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 5px;
             border-radius: 5px;
             margin-right: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Ombra per il testo */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .hotbar-icons {
@@ -78,16 +78,6 @@
             color: #333;
             font-size: 16px;
         }
-
-        .snowflake {
-            position: absolute;
-            top: -10px;
-            color: #cccccc; /* Colore grigio chiaro per il fiocco di neve */
-            font-size: 20px;
-            user-select: none;
-            pointer-events: none;
-            text-shadow: 1px 1px 2px #666666; /* Ombra per l'effetto */
-        }
     </style>
 </head>
 <body>
@@ -119,38 +109,5 @@
             <p>Cliccando sui tasti "WhatsApp" e "YouTube", puoi esplorare ulteriori contenuti e unirti al canale o al gruppo desiderato per supportare e rimanere aggiornato con le ultime novità.</p>
         </div>
     </div>
-
-    <script>
-        // Funzione per creare un fiocco di neve
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "•"; // Simbolo del fiocco di neve
-
-            // Posizione orizzontale casuale
-            snowflake.style.left = Math.random() * window.innerWidth + "px";
-
-            // Appendere il fiocco di neve al corpo
-            document.body.appendChild(snowflake);
-
-            // Animazione del fiocco di neve verso il basso
-            snowflake.animate(
-                [
-                    { transform: "translateY(0)" },
-                    { transform: `translateY(${window.innerHeight}px)` }
-                ],
-                {
-                    duration: 15000, // Durata di 15 secondi
-                    iterations: 1,
-                    easing: "linear"
-                }
-            ).onfinish = () => {
-                snowflake.remove(); // Rimuovere il fiocco di neve al termine
-            };
-        }
-
-        // Creazione continua di fiocchi di neve
-        setInterval(createSnowflake, 100); // Maggiore frequenza di creazione
-    </script>
 </body>
 </html>
