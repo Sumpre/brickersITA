@@ -8,12 +8,12 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh; /* Cambiato da height a min-height */
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: #f3f4f6;
-            overflow: hidden;
+            overflow-x: hidden; /* Permette solo lo scroll verticale */
         }
 
         .hotbar {
@@ -63,6 +63,7 @@
             max-width: 800px;
             width: 90%;
             margin: 20px auto;
+            padding-bottom: 20px; /* Aggiunto padding per margine inferiore */
         }
 
         .info-box, .video-box {
@@ -93,7 +94,7 @@
 </head>
 <body>
     <div class="hotbar">
-        <div class="title">brickersITA</div>
+        <div class="title">brickers</div>
         <div class="hotbar-icons">
             <a href="https://whatsapp.com/channel/0029Vabjtii4yltMQCO1g433" target="_blank">
                 WhatsApp
@@ -115,7 +116,7 @@
             <p>In questo sito ti terremo aggiornato<span class="slash">/</span>a sul mondo dei mattoncini LEGO e sulle costruzioni ed eventi della nostra città LEGO. Iscriviti ai nostri canali semplicemente cliccando le scritte WhatsApp e YouTube e visita questo canale circa una volta a settimana per supportarci e restare aggiornato<span class="slash">/</span>a!</p>
         </div>
         <div class="video-box">
-            <video autoplay loop muted playsinline poster="IMG-20241207-WA0012.jpg">
+            <video autoplay loop muted playsinline poster="1000317435.jpg">
                 <source src="brickers - The brickers.mp4" type="video/mp4">
                 Il tuo browser non supporta il tag video.
             </video>
