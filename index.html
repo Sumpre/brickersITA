@@ -31,7 +31,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-image: url('1000317435.jpg');
+            background-image: url('IMG-20241207-WA0012.jpg'); /* Inserisci il percorso della tua immagine qui */
             background-size: cover;
             background-position: center;
         }
@@ -65,7 +65,7 @@
             margin: 20px auto;
         }
 
-        .info-box {
+        .info-box, .video-box {
             background-color: #fff;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -74,9 +74,20 @@
         }
 
         .info-box p {
-            margin: 0;
+            margin: 0 0 15px;
             color: #333;
             font-size: 16px;
+        }
+
+        .slash {
+            color: #ff5733;
+            font-weight: bold;
+        }
+
+        .video-box video {
+            width: 100%;
+            border-radius: 10px;
+            outline: none;
         }
     </style>
 </head>
@@ -100,13 +111,14 @@
     </div>
     <div class="info-container" id="home">
         <div class="info-box">
-            <p>Questo canale è dedicato alla creazione di storie e animazioni creative utilizzando i mattoncini LEGO. Ogni video è realizzato con attenzione meticolosa ai dettagli, catturando l'essenza della narrazione attraverso l'animazione in stop-motion.</p>
+            <p>Benvenuti sul sito ufficiale di the Brickers ITA!! Se cliccate i pulsanti “YouTube” e “WhatsApp” potrete iscrivervi ai nostri canali dove pubblichiamo i nostri video e post.</p>
+            <p>In questo sito ti terremo aggiornato<span class="slash">/</span>a sul mondo dei mattoncini LEGO e sulle costruzioni ed eventi della nostra città LEGO. Iscriviti ai nostri canali semplicemente cliccando le scritte WhatsApp e YouTube e visita questo canale circa una volta a settimana per supportarci e restare aggiornato<span class="slash">/</span>a!</p>
         </div>
-        <div class="info-box">
-            <p>Creare questi video è un processo laborioso. Implica scattare numerose foto di piccoli movimenti incrementali dei pezzi LEGO, assemblandoli con cura per formare animazioni fluide che raccontano storie coinvolgenti.</p>
-        </div>
-        <div class="info-box">
-            <p>Cliccando sui tasti "WhatsApp" e "YouTube", puoi esplorare ulteriori contenuti e unirti al canale o al gruppo desiderato per supportare e rimanere aggiornato con le ultime novità.</p>
+        <div class="video-box">
+            <video autoplay loop muted playsinline poster="IMG-20241207-WA0012.jpg">
+                <source src="brickers - The brickers.mp4" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>
         </div>
     </div>
 </body>
